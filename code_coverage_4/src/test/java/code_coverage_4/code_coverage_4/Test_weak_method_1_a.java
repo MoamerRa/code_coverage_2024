@@ -4,24 +4,87 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class Test_weak_method_1_a {
-	
-	WeakClass_1 tester= new WeakClass_1();
-	
+import code_coverage_4.code_coverage_4.Triangle_classification.Triangle_Types;
+
+/*
+ * מעמר רביע – 207661836
+ * אלאא נפאפעה – 212896021
+ * */
+
+public class Test_weak_method_1_a 
+{
+	Triangle_classification test = new Triangle_classification();
+
 	@Test
-	public void weakmethod1b() {
-		int result = tester.weakMethod1(10, 2);
-		int expected = 1;
-		
-		assertEquals(expected, result);
+	public void Test_01() {
+		String Expected_result = "Nottriangle";
+		int a = 5, b = 7, c = 13;
+		String actual_result = Triangle_classification.classifyTriangle(a, b, c);
+		assertEquals(actual_result, Expected_result);
+		System.out.println("Test 1 : " + Expected_result);
 	}
 
 	@Test
-	public void weakmethod1b2() {
-		int result = tester.weakMethod1(-10, 2);
-		int expected = -1;
-		
-		assertEquals(expected, result);
+	public void Test_02() {
+		String Expected_result = "Nottriangle";
+		int a = 6, b = 16, c = 4;
+		String actual_result = Triangle_classification.classifyTriangle(a, b, c);
+		assertEquals(actual_result, Expected_result);
+		System.out.println("Test 2 : " + Expected_result);
+	}
+
+	@Test
+	public void Test_03() {
+		String Expected_result = "Nottriangle";
+		int a = 5, b = 1, c = 1;
+		String actual_result = Triangle_classification.classifyTriangle(a, b, c);
+		assertEquals(actual_result, Expected_result);
+		System.out.println("Test 3 : " + Expected_result);
+	}
+
+	@Test
+	public void Test_04() {
+		String Expected_result = "equilateral";
+		int a = 6, b = 6, c = 6;
+		String actual_result = Triangle_classification.classifyTriangle(a, b, c);
+		assertEquals(actual_result, Expected_result);
+		System.out.println("Test 4 : " + Expected_result);
+	}
+
+	@Test
+	public void Test_05() {
+		String Expected_result = "isosceles";
+		int a = 8, b = 8, c = 6;
+		String actual_result = Triangle_classification.classifyTriangle(a, b, c);
+		assertEquals(actual_result, Expected_result);
+		System.out.println("Test 5 : " + Expected_result);
+	}
+
+	@Test
+	public void Test_06() {
+		String Expected_result = "isosceles";
+		int a = 8, b = 6, c = 8;
+		String actual_result = Triangle_classification.classifyTriangle(a, b, c);
+		assertEquals(actual_result, Expected_result);
+		System.out.println("Test 6 : " + Expected_result);
+	}
+
+	@Test
+	public void Test_07() {
+		String Expected_result = "isosceles";
+		int a = 6, b = 8, c = 8;
+		String actual_result = Triangle_classification.classifyTriangle(a, b, c);
+		assertEquals(actual_result, Expected_result);
+		System.out.println("Test 7 : " + Expected_result);
+	}
+
+	@Test
+	public void Test_08() {
+		String Expected_result = "Scalene";
+		int a = 3, b = 4, c = 5;
+		String actual_result = Triangle_classification.classifyTriangle(a, b, c);
+		assertEquals(actual_result, Expected_result);
+		System.out.println("Test 8 : " + Expected_result);
 	}
 
 
